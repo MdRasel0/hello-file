@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: file-service
+  cloud:
+    consul:
+      host: consul-prod
+      port: 8500
+      discovery:
+        instance-id: "${spring.application.name}:${random.int[1,999999]}"
